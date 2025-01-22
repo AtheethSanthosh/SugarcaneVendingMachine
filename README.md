@@ -24,16 +24,16 @@ LEDs light up to indicate the progress of juice pouring.
 Multiple LEDs represent juice combination selection.
 Visual feedback for completion or error states.
 Repository Structure
-plaintext
-Copy
-Edit
+
 ├── Code/
 │   ├── led_button_practice.ino       # Arduino code for basic LED and button logic
 │   ├── juice_dispensing_led_logic.ino # Simulated LED logic for juice dispensing
 ├── Diagrams/
 │   └── circuit_diagram.png           # Circuit diagram for practice setup
 ├── README.md                         # This file
+
 How to Run
+
 Requirements:
 Hardware:
 Arduino Board (e.g., Uno, Mega)
@@ -42,9 +42,7 @@ Software:
 Arduino IDE for writing and uploading code
 Steps:
 Clone this repository:
-bash
-Copy
-Edit
+
 git clone https://github.com/your-username/sugarcane-vending-machine.git
 Open the .ino files in the Arduino IDE.
 Connect your Arduino board to your computer.
