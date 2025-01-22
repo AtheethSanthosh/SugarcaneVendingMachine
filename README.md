@@ -1,5 +1,5 @@
-# SugarcaneVendingMachine
-Automated Sugarcane Vending Machine - Arduino Project
+# Automated Sugarcane Vending Machine - Arduino Project
+
 Welcome to the Automated Sugarcane Vending Machine project! This repository documents our journey in embedded systems programming using Arduino, as we prepare for the design and development of an automated vending machine.
 
 Project Overview
