@@ -41,8 +41,11 @@ We are currently practicing the basics of Arduino programming and hardware inter
 │   └── circuit_diagram.png           # Circuit diagram for practice setup
 ├── README.md                         # This file
 
+## How to Run
 
-# How to Run 
+
+
+
 
 Requirements
 
