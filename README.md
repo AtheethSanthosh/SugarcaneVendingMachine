@@ -54,7 +54,7 @@ Arduino IDE for writing and uploading code
 
 ### Steps
 
-Clone this repository: git clone https://github.com/your-username/sugarcane-vending-machine.git
+Clone this repository: git clone https://github.com/AtheethSanthosh/SugarcaneVendingMachine.git
 
 Open the .ino files in the Arduino IDE.
 
