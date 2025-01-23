@@ -1,0 +1,38 @@
+#define F_CPU 1000000UL // 1 MHz Clock speed
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main(void) {
+    // Set pins for LEDs (PORTB 0, 1, 2)
+    DDRB |= (1 << PB0) | (1 << PB1) | (1 << PB2);
+
+    // Set pins for buttons (PORTD 0, 1, 2)
+    DDRD &= ~((1 << PD0) | (1 << PD1) | (1 << PD2)); // Input mode
+    PORTD |= (1 << PD0) | (1 << PD1) | (1 << PD2);   // Enable pull-up resistors
+
+    while (1) {
+        // Check button states and control LEDs
+        if (!(PIND & (1 << PD0))) { // Button 1 pressed
+            PORTB |= (1 << PB0); // Turn on LED 1
+        } else {
+            PORTB &= ~(1 << PB0); // Turn off LED 1
+        }
+
+        if (!(PIND & (1 << PD1))) { // Button 2 pressed
+            PORTB |= (1 << PB1); // Turn on LED 2
+        } else {
+            PORTB &= ~(1 << PB1); // Turn off LED 2
+        }
+
+        if (!(PIND & (1 << PD2))) { // Button 3 pressed
+            PORTB |= (1 << PB2); // Turn on LED 3
+        } else {
+            PORTB &= ~(1 << PB2); // Turn off LED 3
+        }
+
+        _delay_ms(50); // Debouncing delay
+    }
+    return 0;
+}
+
+
