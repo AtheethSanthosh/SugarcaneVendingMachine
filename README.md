@@ -40,14 +40,10 @@ We are currently practicing the basics of Arduino programming and hardware inter
 ├── Diagrams/
 │   └── circuit_diagram.png           # Circuit diagram for practice setup
 ├── README.md                         # This file
-
+```
 ## How to Run
 
-
-
-
-
-Requirements
+### Requirements
 
 Hardware:
 Arduino Board (e.g., Uno, Mega)
@@ -56,7 +52,7 @@ LEDs, resistors, buttons, and wires
 Software:
 Arduino IDE for writing and uploading code
 
-Steps
+### Steps
 
 Clone this repository: git clone https://github.com/your-username/sugarcane-vending-machine.git
 
@@ -67,3 +63,15 @@ Connect your Arduino board to your computer.
 Upload the code to your Arduino board.
 
 Connect the circuit as per the circuit_diagram.png and observe the LED functionality.
+
+### Next Steps
+
+Integrate sensors to automate juice pouring.
+
+Add user interaction features like buttons for selecting juice combinations.
+
+Design a complete workflow for the vending machine.
+
+### Acknowledgments
+
+This project is being carried out under the mentorship of Balemarthy Vamshi Sir. Special thanks to Anil Achoora Sir for his support in providing this opportunity.
