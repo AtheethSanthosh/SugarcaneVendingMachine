@@ -1,38 +1,46 @@
-#define F_CPU 1000000UL // 1 MHz Clock speed
+#define F_CPU 16000000UL  // Define clock frequency
 #include <avr/io.h>
 #include <util/delay.h>
 
 int main(void) {
-    // Set pins for LEDs (PORTB 0, 1, 2)
-    DDRB |= (1 << PB0) | (1 << PB1) | (1 << PB2);
+    // Configure PB5, PB4, PB3 as outputs for LEDs
+    DDRB |= (1 << PB5) | (1 << PB4) | (1 << PB3);
 
-    // Set pins for buttons (PORTD 0, 1, 2)
-    DDRD &= ~((1 << PD0) | (1 << PD1) | (1 << PD2)); // Input mode
-    PORTD |= (1 << PD0) | (1 << PD1) | (1 << PD2);   // Enable pull-up resistors
+    // Configure PD2, PD3, PD4 as inputs for switches
+    DDRD &= ~((1 << PD2) | (1 << PD3) | (1 << PD4));  // Set PD2, PD3, PD4 as inputs
+    PORTD &= ~((1 << PD2) | (1 << PD3) | (1 << PD4)); // Ensure no internal pull-up
 
     while (1) {
-        // Check button states and control LEDs
-        if (!(PIND & (1 << PD0))) { // Button 1 pressed
-            PORTB |= (1 << PB0); // Turn on LED 1
+        // Switch 1 (PD2) and LED 1 (PB5)
+        if (PIND & (1 << PD2)) {
+            PORTB |= (1 << PB5);  // Turn LED 1 on
+            _delay_ms(500);
+            PORTB &= ~(1 << PB5); // Turn LED 1 off
+            _delay_ms(500);
         } else {
-            PORTB &= ~(1 << PB0); // Turn off LED 1
+            PORTB &= ~(1 << PB5); // Ensure LED 1 is off
         }
 
-        if (!(PIND & (1 << PD1))) { // Button 2 pressed
-            PORTB |= (1 << PB1); // Turn on LED 2
+        // Switch 2 (PD3) and LED 2 (PB4)
+        if (PIND & (1 << PD3)) {
+            PORTB |= (1 << PB4);  // Turn LED 2 on
+            _delay_ms(500);
+            PORTB &= ~(1 << PB4); // Turn LED 2 off
+            _delay_ms(500);
         } else {
-            PORTB &= ~(1 << PB1); // Turn off LED 2
+            PORTB &= ~(1 << PB4); // Ensure LED 2 is off
         }
 
-        if (!(PIND & (1 << PD2))) { // Button 3 pressed
-            PORTB |= (1 << PB2); // Turn on LED 3
+        // Switch 3 (PD4) and LED 3 (PB3)
+        if (PIND & (1 << PD4)) {
+            PORTB |= (1 << PB3);  // Turn LED 3 on
+            _delay_ms(500);
+            PORTB &= ~(1 << PB3); // Turn LED 3 off
+            _delay_ms(500);
         } else {
-            PORTB &= ~(1 << PB2); // Turn off LED 3
+            PORTB &= ~(1 << PB3); // Ensure LED 3 is off
         }
-
-        _delay_ms(50); // Debouncing delay
     }
-    return 0;
+
+    return 0; // Program will never reach here
 }
-
-
