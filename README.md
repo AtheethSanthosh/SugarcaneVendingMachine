@@ -74,4 +74,4 @@ Design a complete workflow for the vending machine.
 
 ### Acknowledgments
 
-This project is being carried out under the mentorship of Balemarthy Vamshi Sir. Special thanks to Anil Achoora Sir for his support in providing this opportunity.
+This project is being carried out under the mentorship of Balemarthy Vamsi Krishna Sir. Special thanks to Anil Achoora Sir for his support in providing this opportunity.
