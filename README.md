@@ -1,10 +1,10 @@
-# Automated Sugarcane Vending Machine - Arduino Project
+# Intelligent Sugarcane Juice Vending Machine
 
-Welcome to the **Automated Sugarcane Vending Machine** project! This repository documents our journey in embedded systems programming using **Arduino**, as we prepare for the design and development of an automated vending machine.
+Welcome to the **Intelligent Sugarcane Juice Vending Machine** project! This repository documents our journey in embedded systems programming using **Arduino**, as we prepare for the design and development of an automated vending machine.
 
 ## Project Overview
 
-The goal of this project is to build an **automated sugarcane vending machine** with functionalities such as:
+The goal of this project is to build an **Intelligent Sugarcane Juice Vending Machine** with functionalities such as:
 - Indicating juice pouring and dispensing using LEDs.
 - Custom juice combination selection.
 - Automating the entire juice preparation and dispensing process.
